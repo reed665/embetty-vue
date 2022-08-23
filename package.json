@@ -20,9 +20,6 @@
     "embetty",
     "privacy",
     "youtube",
-    "vimeo",
-    "facebook",
-    "twitter",
     "video"
   ],
   "main": "./dist/embetty-vue.cjs",
