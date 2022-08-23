@@ -1,6 +1,6 @@
 # embetty-vue [![npm](https://img.shields.io/npm/v/embetty-vue.svg)](https://www.npmjs.com/package/embetty-vue)
 
-Embetty displays remote content like tweets or videos without compromising your privacy.
+Embetty displays remote content like videos without compromising your privacy.
 
 This is a Vue.js alternative to the original [embetty](https://github.com/heiseonline/embetty) implementation (which is based on Web Components). To use it, you need to have a [embetty server](https://github.com/heiseonline/embetty-server) up and running.
 
@@ -44,14 +44,12 @@ You can link to the files without `.min` for debugging.
 ### Using the components
 
 ```html
-<embetty-tweet status="928365837123227654" />
 <embetty-video type="youtube" video-id="m6UOo2YGbIE" />
 ```
 
 If you didn't specify the server URL globally (either the options passed to `Vue.use` or the `<meta>` tag), you must specify it on every component:
 
 ```html
-<embetty-tweet server-url="/path/to/embetty-server" status="928365837123227654" />
 <embetty-video server-url="/path/to/embetty-server" type="youtube" video-id="m6UOo2YGbIE" />
 ```
 
