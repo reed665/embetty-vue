@@ -1,49 +1,29 @@
 {
-  "name": "embetty-vue",
-  "version": "2.0.1",
-  "description": "Embetty displays remote content like videos without compromising your privacy.",
-  "license": "MIT",
-  "author": {
-    "name": "Florian Edelmann",
-    "email": "florian-edelmann@online.de"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/FloEdelmann/embetty-vue"
-  },
-  "bugs": {
-    "url": "https://github.com/FloEdelmann/embetty-vue/issues"
-  },
-  "keywords": [
-    "vue",
-    "vuejs",
-    "embetty",
-    "privacy",
-    "youtube",
-    "video"
-  ],
-  "main": "./dist/embetty-vue.cjs",
-  "module": "./dist/embetty-vue.mjs",
+  "name": "embetty-vue-3",
+  "version": "0.1.0",
   "type": "module",
-  "scripts": {
-    "watch": "rollup -c -w",
-    "build": "rollup -c",
-    "version": "npm run build && git add -A dist"
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/embetty-vue-3.umd.cjs",
+  "module": "./dist/embetty-vue-3.js",
+  "exports": {
+    ".": {
+      "import": "./dist/embetty-vue-3.js",
+      "require": "./dist/embetty-vue-3.umd.cjs"
+    }
   },
-  "peerDependencies": {
-    "vue": "^2.6.11"
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "clean-css": "^5.0.1",
-    "eslint": "^8.0.0",
-    "eslint-plugin-no-es2015": "^1.2.0",
-    "eslint-plugin-vue": "^9.0.0",
-    "rollup": "^2.47.0",
-    "rollup-plugin-css-only": "^3.0.0",
-    "rollup-plugin-svg": "^2.0.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-vue": "6.0.0",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "@vitejs/plugin-vue": "^3.0.3",
+    "sass": "^1.54.5",
+    "vite": "^3.0.7"
   }
 }

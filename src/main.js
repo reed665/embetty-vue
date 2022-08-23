@@ -1,16 +1,10 @@
-import Vue from 'vue';
-import App from './App.vue';
+import { createApp } from 'vue'
 
-Vue.config.productionTip = false;
+import App from './App.vue'
+import EmbettyVue3 from '../lib/main'
 
-import EmbettyVue from './install';
-
-Vue.use(EmbettyVue, {
-  serverUrl: 'http://localhost:3000'
-});
-
-new Vue({
-  render: function(h) {
-    return h(App);
-  }
-}).$mount('#app');
+createApp(App)
+  .use(EmbettyVue3, {
+    serverUrl: 'http://localhost:3000'
+  })
+  .mount('#app')
