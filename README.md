@@ -1,4 +1,4 @@
-# !!! WORK IN PROGRESS !!!
+# !!! NOT PUBLISHED YET !!!
 
 # embetty-vue-3 [![npm](https://img.shields.io/npm/v/embetty-vue-3.svg)](https://www.npmjs.com/package/embetty-vue-3)
 
