@@ -1,6 +1,6 @@
 {
   "name": "embetty-vue-3",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "files": [
     "dist"
@@ -11,7 +11,8 @@
     ".": {
       "import": "./dist/embetty-vue-3.js",
       "require": "./dist/embetty-vue-3.umd.cjs"
-    }
+    },
+    "./dist/style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
