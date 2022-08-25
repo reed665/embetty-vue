@@ -1,15 +1,6 @@
 # !!! WORK IN PROGRESS !!!
 
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
-
-# embetty-vue [![npm](https://img.shields.io/npm/v/embetty-vue.svg)](https://www.npmjs.com/package/embetty-vue)
+# embetty-vue-3 [![npm](https://img.shields.io/npm/v/embetty-vue-3.svg)](https://www.npmjs.com/package/embetty-vue-3)
 
 Embetty displays remote content like videos without compromising your privacy.
 
@@ -21,36 +12,23 @@ This is a Vue.js alternative to the original [embetty](https://github.com/heiseo
 ### Setup when using a bundler (webpack, rollup, etc.)
 
 ```js
-import Vue from 'vue';
-import EmbettyVue from 'embetty-vue';
+import { createApp } from 'vue'
 
-const Vue = require('vue');
-const { EmbettyVue } = require('embetty-vue');
+import EmbettyVue3 from 'embetty-vue-3'
+import 'embetty-vue-3/dist/styles.css'
 
-Vue.use(EmbettyVue, {
-  // optional, but recommended
-  serverUrl: '/path/to/embetty-server', // without trailing slash
+import App from './App.vue'
 
-  // optional
-  posterImageMode: 'cover' // or 'contain'
-});
+createApp(App)
+  .use(EmbettyVue3, {
+    // optional, but recommended
+    serverUrl: '/path/to/embetty-server', // without trailing slash
+
+    // optional
+    posterImageMode: 'cover' // or 'contain'
+  })
+  .mount('#app')
 ```
-
-The CSS can be imported from `embetty-vue/dist/embetty-vue.css`.
-
-
-### Setup when directly linking the files
-
-In your HTML head:
-
-```html
-<link rel="stylesheet" type="text/css" href="dist/embetty-vue.min.css" />
-<meta data-embetty-server="/path/to/embetty-server" /> <!-- without trailing slash -->
-<script type="text/javascript" src="vue.js"></script>
-<script type="text/javascript" src="dist/embetty-vue.browser.min.js"></script>
-```
-
-You can link to the files without `.min` for debugging.
 
 ### Using the components
 
@@ -69,7 +47,7 @@ See [`src/App.vue`](src/App.vue) for a lot of examples and component options.
 
 ## Differences to original implementation
 
-*embetty-vue*'s `<embetty-video>` component supports type `native`: Provide an URL to a video file as `video-id` to load it on click in a `<video>` HTML element.
+*embetty-vue-3*'s `<embetty-video>` component supports type `native`: Provide an URL to a video file as `video-id` to load it on click in a `<video>` HTML element.
 
 
 ## Development
@@ -83,7 +61,7 @@ npm install
 ### Compiles and hot-reloads for development
 
 ```
-npm run watch
+npm run dev
 ```
 
 ### Compiles and minifies for production
