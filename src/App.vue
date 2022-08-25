@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: 'App',
+}
+</script>
+
 <template>
   <div id="app">
     <h1>embetty-vue-3</h1>
@@ -18,7 +24,6 @@
       posterImageMode: 'cover' // or 'contain', see example below
       });</code></pre>
     </article>
-
 
     <h2>Tweet</h2>
 
@@ -70,7 +75,6 @@
       <pre class="language-html"><code>&lt;embetty-tweet status="936339584740454402" /&gt;</code></pre>
     </article>
 
-
     <h2>Video</h2>
 
     <article>
@@ -93,7 +97,8 @@
         :width="500"
         :height="200"
         type="youtube"
-        video-id="3L4fHrIJ3A4" />
+        video-id="3L4fHrIJ3A4"
+      />
       <pre class="language-html"><code>&lt;embetty-video
       :width="500"
       :height="200"
@@ -108,7 +113,8 @@
         :height="200"
         type="youtube"
         video-id="3L4fHrIJ3A4"
-        poster-image-mode="contain" />
+        poster-image-mode="contain"
+      />
       <pre class="language-html"><code>&lt;embetty-video
       :height="200"
       type="youtube"
@@ -162,9 +168,3 @@ article {
   --embetty-font-family: 'Comic Sans MS'
 }
 </style>
-
-<script>
-export default {
-  name: 'App'
-};
-</script>

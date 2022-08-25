@@ -1,11 +1,11 @@
-import FacebookVideo from './FacebookVideo';
-import NativeVideo from './NativeVideo';
-import VimeoVideo from './VimeoVideo';
-import YoutubeVideo from './YoutubeVideo';
+import FacebookVideo from './FacebookVideo'
+import NativeVideo from './NativeVideo'
+import VimeoVideo from './VimeoVideo'
+import YoutubeVideo from './YoutubeVideo'
 
-export var videoImplementations = {
+export const videoImplementations = {
   facebook: FacebookVideo,
   native: NativeVideo,
   vimeo: VimeoVideo,
-  youtube: YoutubeVideo
-};
+  youtube: YoutubeVideo,
+}
