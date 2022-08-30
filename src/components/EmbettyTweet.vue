@@ -1,11 +1,15 @@
 <script>
 import EmbettyEmbed from './EmbettyEmbed.vue'
+import EmbettyLogo from './EmbettyLogo.vue'
 
 const LINK_IMAGE_SIZE = 125
 const MIN_WINDOW_WIDTH = 600
 
 export default {
   name: 'EmbettyTweet',
+  components: {
+    EmbettyLogo,
+  },
   extends: EmbettyEmbed,
   props: {
     status: {
@@ -299,7 +303,7 @@ export default {
           class="powered-by"
           title="embetty - displaying remote content without compromising your privacy."
         >
-          powered by <span class="embetty-logo" v-html="embettyLogo" />
+          powered by <EmbettyLogo class="embetty-logo" />
         </a>
       </article>
     </template>

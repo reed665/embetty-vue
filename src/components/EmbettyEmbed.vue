@@ -1,6 +1,4 @@
 <script>
-import EMBETTY_LOGO from '../assets/embetty.svg'
-
 export default {
   name: 'EmbettyEmbed',
   props: {
@@ -15,8 +13,6 @@ export default {
    */
   data() {
     return {
-      embettyLogo: EMBETTY_LOGO,
-
       fetched: false,
       data: undefined,
     }

@@ -1,10 +1,14 @@
 <script>
 import EmbettyEmbed from './EmbettyEmbed.vue'
+import EmbettyLogo from './EmbettyLogo.vue'
 
 import { videoImplementations } from './video-impl/index'
 
 export default {
   name: 'EmbettyVideo',
+  components: {
+    EmbettyLogo,
+  },
   extends: EmbettyEmbed,
   props: {
     width: {
@@ -199,7 +203,7 @@ export default {
         class="powered-by"
         title="embetty - displaying remote content without compromising your privacy."
       >
-        powered by <span class="embetty-logo" v-html="embettyLogo" />
+        powered by <EmbettyLogo class="embetty-logo" />
       </a>
     </template>
   </div>
